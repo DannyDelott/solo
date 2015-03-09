@@ -2,6 +2,10 @@ $(function(){
 
   var videos = document.getElementsByTagName('video'); 
   
+  /*
+   * HELPER FUNCTION
+   * Creates and empty <div> of width 'w' with a black background.
+   */
   var makeContainer = function(w){
     var container = $('div');
     container.css({
@@ -12,27 +16,32 @@ $(function(){
     return container;
   };
 
-  var resize = function(event){
-    var vid = $(this);
+  /*
+   * EVENT FUNCTION
+   * Takes the video element and resize it to swap the dimensions.
+   */
 
-    var h = vid.innerHeight();
+  var resize = function(event){
+    
+    // gets the video and its width
+    var vid = $(this);
     var w = vid.innerWidth();
+    var h = vid.innerHeight(); 
+
+    // creates a letterbox container
     var container = makeContainer(w); 
     
-    var dim = h/w;
-    console.log(dim);
+    // calculates the vertical dimensions
+    var verticalRatio = h/w;
 
-    vid.css('transform', 'scaleY(' + dim + ')');
-    vid.css('-webkit-transform','scaleY('+ dim + ')');
-    vid.css('-moz-transform','scaleY(' + dim + ')');
-    vid.css('transform', 'scaleX(' + dim + ')');
-    vid.css('-webkit-transform','scaleX('+ dim + ')');
-    vid.css('-moz-transform','scaleX(' + dim + ')');
-    vid.css('background','black');
-    vid.css('object-fit','none');
-
-    console.log(vid.height()); 
-    console.log(vid.width());
+    // resizes the video
+    vid.css({
+      'transform': 'scaleX(' + verticalRatio + ')',
+      '-webkit-transform': 'scaleX('+ verticalRatio + ')',
+      '-moz-transform': 'scaleX(' + verticalRatio + ')',
+      'background': 'black',
+    });
+    
   };
 
   for(var i = 0; i < videos.length; i++){
