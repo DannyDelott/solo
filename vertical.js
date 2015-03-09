@@ -6,25 +6,23 @@ $(function(){
    * HELPER FUNCTION
    * Creates and empty <div> of width 'w' with a black background.
    */
-  var makeContainer = function(w){
-    return '<div style="width:' + w + 'px; background: black;"></div>';
+  var makeContainer = function(w, h){
+    return '<div style="width:' + w + 'px; height:' + h + 'px; background: black;"></div>';
   };
 
   /*
    * EVENT FUNCTION
    * Takes the video element and resize it to swap the dimensions.
    */
-
   var resize = function(event){
     
     // gets the video and its width
     var vid = $(this);
     var w = vid.innerWidth();
     var h = vid.innerHeight(); 
-
+    
     // creates a letterbox container
-    var container = makeContainer(w); 
-    console.log(container); 
+    var container = makeContainer(w, h); 
     
     // calculates the vertical dimensions
     var verticalRatio = h/w/1.3;
