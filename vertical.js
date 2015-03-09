@@ -1,19 +1,13 @@
 $(function(){
 
   var videos = document.getElementsByTagName('video'); 
-  
+
   /*
    * HELPER FUNCTION
    * Creates and empty <div> of width 'w' with a black background.
    */
   var makeContainer = function(w){
-    var container = $('div');
-    container.css({
-      width: w + 'px',
-      background: 'black'
-    });
-
-    return container;
+    return '<div style="width:' + w + 'px; background: black;"></div>';
   };
 
   /*
@@ -30,18 +24,21 @@ $(function(){
 
     // creates a letterbox container
     var container = makeContainer(w); 
+    console.log(container); 
     
     // calculates the vertical dimensions
-    var verticalRatio = h/w;
+    var verticalRatio = h/w/1.3;
 
     // resizes the video
     vid.css({
       'transform': 'scaleX(' + verticalRatio + ')',
       '-webkit-transform': 'scaleX('+ verticalRatio + ')',
       '-moz-transform': 'scaleX(' + verticalRatio + ')',
-      'background': 'black',
     });
-    
+   
+    // add video to container
+   vid.wrap(container); 
+
   };
 
   for(var i = 0; i < videos.length; i++){
