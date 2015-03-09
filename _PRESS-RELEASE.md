@@ -1,4 +1,5 @@
-# Project Name #
+#
+Project Name #
 
 <!-- 
 > This material was originally posted [here](http://www.quora.com/What-is-Amazons-approach-to-product-development-and-product-management). It is reproduced here for posterities sake.
@@ -19,26 +20,45 @@ Once the project moves into development, the press release can be used as a touc
 ## Heading ##
   > Name the product in a way the reader (i.e. your target customers) will understand.
 
+Vertical.js
+
 ## Sub-Heading ##
   > Describe who the market for the product is and what benefit they get. One sentence only underneath the title.
+
+Web developers who want their visitors to experience the beauty of the 9:16 video aspect ratio. 
 
 ## Summary ##
   > Give a summary of the product and the benefit. Assume the reader will not read anything else so make this paragraph good.
 
+Vertical.js is a jQuery plugin that transforms the aspect ratio of all HTML5 videos from 16:9 to 9:16. 
+
 ## Problem ##
   > Describe the problem your product solves.
+
+Wide-screen videos are the international standard. Cell phones give us the benefit of shooting videos in portrait-mode. It's time for a paradigm shift. 
 
 ## Solution ##
   > Describe how your product elegantly solves the problem.
 
+With Vertical.js you now have the ability to display wide-screen videos as vertical videos on any web page you make. 
+
 ## Quote from You ##
   > A quote from a spokesperson in your company.
+
+"Similar to horizontal scrolling, portrait-mode videos are the wave of the future. Mark my words."
 
 ## How to Get Started ##
   > Describe how easy it is to get started.
 
+Installing Vertical.js is as simple as adding a <script></script> tag to your HTML.  You must also include jQuery. 
+
 ## Customer Quote ##
   > Provide a quote from a hypothetical customer that describes how they experienced the benefit.
 
+"Before Vertical.js, nobody believed my videos were shot on a crappy cell phone. Now, it's undeniable!"
+
 ## Closing and Call to Action ##
   > Wrap it up and give pointers where the reader should go next.
+
+Get ready for a revolution in aspect ratio. Implement Vertical.js on your website today!
+
