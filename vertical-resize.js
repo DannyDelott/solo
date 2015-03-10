@@ -47,10 +47,4 @@ $(function(){
       videos[i].addEventListener('loadedmetadata', resize);
     }
 
-  var cropVertical = function(){
-    for(var i = 0; i < videos.length; i++){
-      videos[i].addEventListener('loadedmetadata', crop);
-    }
-  };
-
 });
