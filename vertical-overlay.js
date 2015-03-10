@@ -5,10 +5,14 @@ $(function(){
    * HELPER FUNCTIONS
    */
   var makeContainer = function(dimensions){
-    return '<div class="verticaljs"></div>';
+    return '<div class="verticaljs" style="position:absolute;"></div>';
   };
-  var makeLeftBar = function(){};
-  var makeRightBar = function(){};
+  var makeLeftBar = function(dimensions){
+    return '<div style="position:absolute;left:0;width:' + dimensions[0]/3 + 'px;height:' + dimensions[1] + 'px;background-color:#000;z-index:300000;"></div>';
+  };
+  var makeRightBar = function(dimensions){
+    return '<div style="position:absolute;right:0;width:' + dimensions[0]/3 + 'px;height:' + dimensions[1] + 'px;background-color:#000;z-index:300000;"></div>';
+  };
 
   var getDimensions = function($video){
     return [$video.innerWidth(), $video.innerHeight()];
@@ -34,7 +38,8 @@ $(function(){
     // add video to container
    $vid.wrap(container); 
 
-   $('.verticaljs').prepend('<div>');
+   $('.verticaljs').prepend(makeLeftBar(dimensions));
+   $('.verticaljs').prepend(makeRightBar(dimensions));
 
   };
 
